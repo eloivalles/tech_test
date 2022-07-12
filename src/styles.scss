@@ -1,0 +1,82 @@
+@use '@angular/material' as mat;
+@import './theme/variables';
+@import './theme/mixins';
+@import './theme/reset';
+@import './theme/fonts';
+@import './theme/table';
+@import './theme/buttons';
+@import './theme/icons';
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core;
+
+// Define a light theme
+$light-primary: mat.define-palette(mat.$purple-palette);
+$light-accent: mat.define-palette(mat.$green-palette);
+$light-theme: mat.define-light-theme((
+  color: (
+    primary: $light-primary,
+    accent: $light-accent,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($light-theme);
+
+:root {
+  // colors
+  --color-primary:#388e3c;
+  --color-secondary:#b9f6ca;
+  --color-success: #70ca8e;
+  --color-error: #ed6262;
+  --color-warning: #ff9c54;
+  --color-white: #fff;
+  --color-black: #010101;
+
+  // spacing
+  --spacing-xs: 2px;
+  --spacing-s: 4px;
+  --spacing-m: 8px;
+  --spacing-l: 16px;
+  --spacing-lp: 24px;
+  --spacing-xl: 32px;
+  --spacing-xlp: 56px;
+  --spacing-xxl: 64px;
+}
+
+html{
+  background: url('/assets/images/bg.jpeg');
+  background-position: cover;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--color-primary-variant);
+}
+
+p {
+  @include font-type($font-body1);
+}
+
+a[target='_blank'],
+a[rel='noopener'],
+a[rel='noopener external'] {
+  color: var(--color-secondary);
+  text-decoration: underline;
+}
+
+// keyboard navigation outline (accessibility)
+a:focus,
+button:focus {
+  outline: none;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: var(--color-secondary) solid 4px;
+}
+

@@ -1,0 +1,44 @@
+button:not(:only-child, :last-child) {
+  margin-right: var(--spacing-l);
+}
+
+button[loader] {
+  span {
+    margin: 0 var(--spacing-lp);
+  }
+
+  mat-progress-spinner {
+    position: absolute !important;
+    top: var(--spacing-m);
+    right: var(--spacing-m);
+  }
+}
+
+button[button-chip] {
+  @include border-radius(var(--spacing-xl));
+
+  color: var(--color-white);
+}
+
+button[button-text] {
+  border: 0;
+  background-color: transparent;
+  line-height: 36px;
+  padding: 0 var(--spacing-l);
+  cursor: pointer;
+}
+
+app-phq9-graph .display-mode-toggle mat-button-toggle-group .mat-button-toggle-label-content {
+  line-height: 40px;
+  padding: 0 6px;
+}
+
+.dashboard__main button[mat-flat-button],
+.mat-dialog-container button[mat-flat-button] {
+  background-color: getPrimaryColor(700);
+  color: var(--color-white);
+
+  span {
+    padding: 0 var(--spacing-s);
+  }
+}

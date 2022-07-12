@@ -1,0 +1,21 @@
+<mat-card [ngSwitch]="state" class="notes">
+    <div *ngSwitchCase="'loading'" class="notes--loader">
+        <mat-progress-spinner mode="indeterminate" diameter="42" color="accent"> </mat-progress-spinner>
+    </div>
+    <div *ngSwitchCase="'loaded'" class="notes--data">
+       <mat-card *ngFor="let note of notes">
+        <p class="notes__header">
+            <span>Coach: {{note.coachName}}</span>
+            <span>{{note.createdAt | date: 'medium'}}</span>
+        </p>
+        <p>{{note.content}}</p>
+        <button mat-icon-button class="notes__flag" (click)="toogleflag(note.id)" aria-label="button to flag a note">
+            <mat-icon>{{note.isFlagged ? 'flag' : 'outlined_flag'}}</mat-icon>
+            {{note.isFlagged ? 'unflag' : 'flag'}} this note
+        </button>
+       </mat-card>
+    </div>
+    <div *ngSwitchCase="'error'" class="notes--error">
+       error loading notes
+    </div>
+</mat-card>

@@ -1,0 +1,47 @@
+@import './theme/mixins';
+$min-height: 250px;
+
+:host {
+    display: block;
+    padding: var(--spacing-l);
+
+    .notes {
+        min-height: $min-height;
+
+        &--loader {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: $min-height;
+        }
+    
+        &--data {
+            @include font-type($font-body1);
+            padding: var(--spacing-l);
+            
+            > mat-card {
+                margin-bottom: var(--spacing-m);
+                &:last-child {
+                    margin-bottom: 0
+                }
+            }
+        }
+    
+        &--error {
+            @include font-type($font-body1);
+            color: var(--color-error);
+            padding: var(--spacing-xl);
+        }
+
+        &__header {
+            display: flex;    
+            justify-content: space-between;
+            @include font-type($font-body2);
+        }
+
+        &__flag {
+            @include font-type($font-caption);
+            width: 100px;
+        }
+    }
+}

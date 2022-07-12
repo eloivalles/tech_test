@@ -1,0 +1,29 @@
+table {
+  width: 100%;
+  table-layout: fixed;
+
+  td,
+  td.mat-cell {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-right: var(--spacing-lp);
+
+    span {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  th,
+  td {
+    &.mat-column-actions {
+      text-align: center;
+      text-overflow: clip;
+    }
+  }
+
+  th .mat-sort-header-sorted .mat-sort-header-arrow {
+    color: getAccentColor(600);
+  }
+}

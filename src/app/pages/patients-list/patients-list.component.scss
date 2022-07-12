@@ -1,0 +1,23 @@
+@import './theme/mixins';
+
+:host {
+    display: block;
+    padding: var(--spacing-l);
+    
+    .patients {∫
+        &__table {
+            @include font-type($font-body1);
+            table-layout: auto;
+        }
+        
+        &__edit {
+            @include font-type($font-body2);
+            background-color: var(--color-primary);
+            color: var(--color-white);
+
+            span {
+                padding-right: var(--spacing-m);
+            }
+        }
+    }
+}

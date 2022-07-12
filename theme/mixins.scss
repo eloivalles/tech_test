@@ -1,0 +1,16 @@
+@import './variables';
+
+@mixin font-type($font) {
+  @each $attr, $value in $font {
+    #{$attr}: $value;
+  }
+}
+
+@mixin box-shadow() {
+  box-shadow: -2px 4px 16px rgb(34 55 71 / 15%);
+}
+
+@mixin border-radius($radius) {
+  border-radius: $radius;
+}
+
