@@ -1,0 +1,82 @@
+
+$spacing: (
+  xs: 2px,
+  s: 4px,
+  m: 8px,
+  l: 16px,
+  lp: 24px,
+  xl: 32px,
+  xlp: 56px,
+  xxl: 64px,
+);
+
+// fonts
+$font-path: 'assets/fonts';
+$font-family: 'Roboto';
+
+$font-headline1: (
+  font-family: $font-family,
+  font-size: 56px,
+  font-weight: 300,
+);
+
+$font-headline2: (
+  font-family: $font-family,
+  font-size: 30px,
+  font-weight: 300,
+);
+
+$font-headline3: (
+  font-family: $font-family,
+  font-size: 24px,
+  font-weight: 300,
+);
+
+$font-headline4: (
+  font-family: $font-family,
+  font-size: 34px,
+  font-weight: 300,
+);
+
+$font-headline5: (
+  font-family: $font-family,
+  font-size: 30px,
+  font-weight: 300,
+);
+
+$font-headline6: (
+  font-family: $font-family,
+  font-size: 24px,
+  font-weight: 300,
+);
+
+$font-subtitle: (
+  font-family: $font-family,
+  font-size: 20px,
+  font-weight: 300,
+);
+
+$font-body1: (
+  font-family: $font-family,
+  font-size: 16px,
+  font-weight: 300,
+);
+
+$font-body2: (
+  font-family: $font-family,
+  font-size: 14px,
+  font-weight: 300,
+);
+
+$font-caption: (
+  font-family: $font-family,
+  font-size: 12px,
+  font-weight: 300,
+);
+
+$font-overline: (
+  font-family: $font-family,
+  font-size: 10px,
+  font-weight: 300,
+);
+

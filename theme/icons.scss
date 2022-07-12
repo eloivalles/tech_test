@@ -1,0 +1,15 @@
+$icon-s: 16px;
+$icon-m: 24px;
+$icon-l: 32px;
+
+mat-icon {
+  font-size: $icon-m !important;
+
+  &[icon-small] {
+    font-size: $icon-s !important;
+  }
+
+  &[icon-big] {
+    font-size: $icon-l !important;
+  }
+}
