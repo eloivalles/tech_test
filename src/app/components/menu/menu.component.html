@@ -1,0 +1,16 @@
+<button *ngIf="isRootNode" mat-button [matMenuTriggerFor]="menu">
+    Open Menu
+</button>
+<button *ngIf="!isRootNode" mat-menu-item [matMenuTriggerFor]="menu" (menuOpened)="getData(trigger)">
+    {{ trigger.name }}
+</button>
+<mat-menu #menu="matMenu">
+    <ng-container *ngFor="let item of data; let i = index">
+        <button mat-menu-item>
+            <app-menu [trigger]="item" *ngIf="item.isExpandable; else menuItem"></app-menu>
+        </button>
+        <ng-template #menuItem>
+            <button mat-menu-item>{{ item.name }}</button>
+        </ng-template>
+    </ng-container>
+</mat-menu>
