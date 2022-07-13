@@ -1,25 +1,33 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from "@angular/core/testing";
+import { MatMenuModule } from "@angular/material/menu";
+import { MenuComponent } from "./menu.component";
 
-import { MenuComponent } from './menu.component';
-
-describe('MenuComponent', () => {
+describe("MenuComponent", () => {
   let component: MenuComponent;
   let fixture: ComponentFixture<MenuComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MenuComponent ]
-    })
-    .compileComponents();
+      declarations: [MenuComponent],
+      imports: [MatMenuModule],
+    }).compileComponents();
   });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(MenuComponent);
     component = fixture.componentInstance;
+    component.data = [
+      {
+        name: "Bebidas",
+        id: 1,
+        parentId: null,
+      },
+    ];
+    component.trigger = component.data[0];
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  test("should create", () => {
+    expect(component).not.toBeNull();
   });
 });
