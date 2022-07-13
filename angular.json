@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "conexus": {
+    "wabi": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/conexus",
+            "outputPath": "dist/wabi",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -84,16 +84,16 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "conexus:build",
+            "browserTarget": "wabi:build",
             "port": 4200,
             "open": true
           },
           "configurations": {
             "production": {
-              "browserTarget": "conexus:build:production"
+              "browserTarget": "wabi:build:production"
             },
             "development": {
-              "browserTarget": "conexus:build:development"
+              "browserTarget": "wabi:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -101,7 +101,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "conexus:build"
+            "browserTarget": "wabi:build"
           }
         },
         "lint": {
@@ -116,5 +116,5 @@
       }
     }
   },
-  "defaultProject": "conexus"
+  "defaultProject": "wabi"
 }
